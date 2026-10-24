@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=YOUR_DB_NAME</property>
+        <property name="hibernate.connection.username">YOUR_USERNAME</property>
+        <property name="hibernate.connection.password">YOUR_PASSWORD</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <mapping class="com.audioorder.entity.Country"/>
+        <mapping class="com.audioorder.entity.Client"/>
+        <mapping class="com.audioorder.entity.Manager"/>
+        <mapping class="com.audioorder.entity.Manufacturer"/>
+        <mapping class="com.audioorder.entity.Price"/>
+        <mapping class="com.audioorder.entity.Order"/>
+        <mapping class="com.audioorder.entity.OrderContent"/>
+    </session-factory>
+</hibernate-configuration> 

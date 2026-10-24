@@ -1,0 +1,8 @@
+jdk-21/
+javafx-sdk-17.0.15/
+.idea/
+*.iml
+out/
+target/
+build/
+.gradle/

@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group 'com.audioorder'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:21.0.1'
+    implementation 'org.openjfx:javafx-fxml:21.0.1'
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:12.6.1.jre11'
+    implementation 'io.github.palexdev:materialfx:11.16.1'
+    implementation 'org.slf4j:slf4j-simple:2.0.12'
+}
+
+application {
+    mainClass = 'com.audioorder.MainApp'
+}
+
+javafx {
+    version = '21.0.1'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+} 
